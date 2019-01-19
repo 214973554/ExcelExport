@@ -21,6 +21,8 @@ namespace ExcelExport
             string savePath = Path.Combine(Application.StartupPath, "Template", string.Format("{0}.xlsx", Guid.NewGuid()));
 
             ExcelHelper.ExportExcel(path, savePath, data);
+
+            MessageBox.Show("生成成功。");
         }
 
         private List<SheetDataSource<BaseHead, BaseListRow>> GetDataSource()
